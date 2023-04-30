@@ -39,22 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
     Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
     Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Re pair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
-    Transaction('23', 'Repair Laptop', 69.99, DateTime.now()),
+
   ];
 
   @override
@@ -90,11 +75,24 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       decoration: BoxDecoration(border: Border.all(color: Colors.blue, width: 2)),
                       padding: const EdgeInsets.all(10),
-                      child: Text(transactions[index].amount.toString()),
+                      child: Text(
+                        transactions[index].amount.toString(),
+                        style: const TextStyle(
+                          color: Colors.purple,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20
+                        ),
+                      ),
                     ),
                     Column(
                       children: [
-                        Text(transactions[index].title),
+                        Text(
+                            transactions[index].title,
+                            style: const TextStyle(
+                              color: Colors.blueGrey,
+                              fontSize: 17,
+                            ),
+                        ),
                         Text(transactions[index].date.toString())
                       ],
                     )
